@@ -5,14 +5,14 @@ export function Contact() {
     <section id="contact" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 7
+        INPUT 6
       </span>
       <h2 className="section-title mt-3">Contact</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
 
       <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
-        Correspondence may be directed through the channels below. I make every
-        effort to reply within a fortnight.
+        Vous pouvez me joindre via les canaux ci-dessous. Je m&apos;efforce de
+        répondre sous quinzaine.
       </p>
 
       <div className="mt-8 space-y-4">
@@ -22,7 +22,7 @@ export function Contact() {
           </span>
           <div>
             <p className="font-heading text-sm font-semibold tracking-wide text-foreground">
-              Mail
+              Email
             </p>
             <a
               href="mailto:anerti@example.com"
@@ -39,7 +39,7 @@ export function Contact() {
           </span>
           <div>
             <p className="font-heading text-sm font-semibold tracking-wide text-foreground">
-              Address
+              Adresse
             </p>
             <p className="text-sm text-muted-foreground">
               742 Evergreen Terrace, Chicago, IL
@@ -53,7 +53,7 @@ export function Contact() {
           </span>
           <div>
             <p className="font-heading text-sm font-semibold tracking-wide text-foreground">
-              Telephone
+              Téléphone
             </p>
             <a
               href="tel:+13125551234"

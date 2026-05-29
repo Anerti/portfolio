@@ -1,27 +1,27 @@
 const projects = [
   {
-    title: "Payment Gateway Service",
+    title: "Service de Passerelle de Paiement",
     year: "2024",
     description:
-      "A high-throughput, low-latency payment orchestration service handling 10K+ transactions per second with idempotency guarantees.",
+      "Un service d'orchestration de paiement à haut débit et faible latence gérant 10 000+ transactions par seconde avec garanties d'idempotence.",
   },
   {
-    title: "Real-Time Analytics Pipeline",
+    title: "Pipeline d'Analyse en Temps Réel",
     year: "2023",
     description:
-      "Kafka-streams-based pipeline processing 2M+ daily events with sub-second latency for operational dashboards.",
+      "Pipeline basé sur Kafka Streams traitant 2 millions+ d'événements par jour avec une latence inférieure à la seconde.",
   },
   {
-    title: "Microservice Migration Kit",
+    title: "Kit de Migration vers les Microservices",
     year: "2022",
     description:
-      "Internal tooling and migration framework that reduced monolith-to-microservice cutover time from weeks to days.",
+      "Un outil interne et framework de migration qui a réduit le temps de basculement du monolithe aux microservices de semaines à jours.",
   },
   {
-    title: "Open Source: Retry4j",
+    title: "Open Source : Retry4j",
     year: "2021",
     description:
-      "A Java library for declarative retry policies with exponential backoff, circuit breakers, and metrics integration.",
+      "Une bibliothèque Java pour les politiques de réessai déclaratives avec backoff exponentiel, circuit breakers et intégration de métriques.",
   },
 ];
 
@@ -30,9 +30,9 @@ export function Projects() {
     <section id="projects" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 5
+        INPUT 4
       </span>
-      <h2 className="section-title mt-3">Projects</h2>
+      <h2 className="section-title mt-3">Projets</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
 
       <div className="grid gap-5 sm:grid-cols-2">

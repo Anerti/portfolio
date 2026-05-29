@@ -13,12 +13,12 @@ export default function Home() {
 
       <main className="md:ml-64">
         <div className="mx-auto max-w-3xl px-6">
-          <About />
-          <Career />
-          <Skills />
-          <Projects />
-          <Writeups />
-          <Contact />
+            <About />
+            <Skills />
+            <Projects />
+            <Writeups />
+            <Career />
+            <Contact />
         </div>
       </main>
     </div>

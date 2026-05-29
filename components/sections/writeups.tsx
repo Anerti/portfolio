@@ -1,21 +1,21 @@
 const articles = [
   {
-    title: "Why I Still Reach for Spring Boot in 2025",
-    date: "February 2025",
+    title: "Pourquoi j'utilise encore Spring Boot en 2025",
+    date: "Février 2025",
     excerpt:
-      "Convention over configuration, mature ecosystem, and why productivity matters more than novelty.",
+      "La convention plutôt que la configuration, un écosystème mature, et pourquoi la productivité prime sur la nouveauté.",
   },
   {
-    title: "Lessons from Building a Payment Gateway",
-    date: "November 2024",
+    title: "Leçons de la construction d'une passerelle de paiement",
+    date: "Novembre 2024",
     excerpt:
-      "Idempotency, exactly-once semantics, and the edge cases that keep you up at night.",
+      "Idempotence, sémantique « exactly-once », et les cas limites qui vous tiennent éveillé la nuit.",
   },
   {
-    title: "Observability Beyond Dashboards",
-    date: "July 2024",
+    title: "L'observabilité au-delà des tableaux de bord",
+    date: "Juillet 2024",
     excerpt:
-      "Why structured logging, distributed tracing, and good alerting matter more than pretty charts.",
+      "Pourquoi la journalisation structurée, le tracing distribué et de bonnes alertes comptent plus que de beaux graphiques.",
   },
 ];
 
@@ -24,9 +24,9 @@ export function Writeups() {
     <section id="writeups" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 6
+        INPUT 5
       </span>
-      <h2 className="section-title mt-3">Write-ups</h2>
+      <h2 className="section-title mt-3">Articles</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
 
       <div className="space-y-4">

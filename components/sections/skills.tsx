@@ -1,6 +1,6 @@
 const skillGroups = [
   {
-    title: "Languages",
+    title: "Langages",
     skills: ["Java", "Kotlin", "TypeScript", "SQL"],
   },
   {
@@ -18,9 +18,9 @@ export function Skills() {
     <section id="skills" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 4
+        INPUT 3
       </span>
-      <h2 className="section-title mt-3">Skills</h2>
+      <h2 className="section-title mt-3">Compétences</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
 
       <div className="grid gap-5 sm:grid-cols-3">

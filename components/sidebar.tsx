@@ -1,21 +1,48 @@
 "use client";
 
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ChevronRight, Menu, X } from "lucide-react";
 
 const sections = [
-  { id: "about", label: "About" },
-  { id: "career", label: "Career" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
-  { id: "writeups", label: "Write-ups" },
+  { id: "about", label: "À propos" },
+  { id: "career", label: "Carrière" },
+  { id: "skills", label: "Compétences" },
+  { id: "projects", label: "Projets" },
+  { id: "writeups", label: "Articles" },
   { id: "contact", label: "Contact" },
 ];
 
 export function Sidebar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("about");
+
+  useEffect(() => {
+    const ids = sections.map((s) => s.id);
+    const observers: IntersectionObserver[] = [];
+
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActive(id);
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
 
   const scrollTo = (id: string) => {
     setActive(id);
@@ -42,15 +69,19 @@ export function Sidebar() {
       >
         <div className="flex h-full flex-col">
           <div className="mb-10 border-b-2 border-sidebar-border pb-6">
-            <h2 className="font-heading text-xl font-semibold uppercase tracking-[0.2em] text-sidebar-foreground">
-              A. Neri
-            </h2>
-            <div className="mt-3 flex items-center gap-2">
-              <span className="inline-block size-2 rounded-full bg-sidebar-primary" />
-              <span className="font-heading text-[10px] uppercase tracking-[0.25em] text-sidebar-primary">
-                Backend Developer
-              </span>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/spring-logo.svg"
+                alt=""
+                width={28}
+                height={28}
+                className="size-7 opacity-80"
+              />
+              <h2 className="whitespace-nowrap font-heading text-xs font-semibold uppercase tracking-[0.12em] text-sidebar-foreground">
+                E. ANDRIANOMBANA
+              </h2>
             </div>
+
           </div>
 
           <nav className="flex-1 space-y-1">
@@ -65,10 +96,13 @@ export function Sidebar() {
                     : "text-sidebar-foreground/60 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
                 )}
               >
-                <span
+                <ChevronRight
+                  size={14}
                   className={cn(
-                    "inline-block size-1.5 rounded-full transition-colors duration-150",
-                    active === s.id ? "bg-sidebar-primary" : "bg-transparent"
+                    "shrink-0 transition-all duration-150",
+                    active === s.id
+                      ? "translate-x-0 opacity-100 text-sidebar-primary"
+                      : "-translate-x-1 opacity-0"
                   )}
                 />
                 {s.label}

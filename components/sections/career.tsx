@@ -1,24 +1,27 @@
 const roles = [
   {
-    period: "2025 \u2014 Present",
-    title: "Senior Backend Engineer",
-    org: "TechCorp",
+    period: "Janvier 2025 \u2014 Actuellement",
+    title: "Etudiant en informatique",
+    org: "HEI Madagascar",
     description:
-      "Leading architecture decisions, mentoring junior engineers, and driving reliability improvements across the platform.",
+      "Conception et développement d'un service d'orchestration de paiement en temps réel et migration d'un monolithe vers des microservices.",
   },
   {
-    period: "2021 \u2014 2024",
-    title: "Backend Engineer",
-    org: "Finova",
-    description:
-      "Designed and built a real-time payment orchestration service and led the migration from a monolith to microservices.",
+    period: "Mars 2023 \u2014 Juin 2023",
+    title: "Stagiaire en Radioprotection",
+    org: "CHU Joseph Raseta Befelatanana",
+    description: [
+      "Évaluer les pratiques en matière de radioprotection et proposer des améliorations continues.",
+      "Analyser le niveau d'exposition aux radiations du personnel médical.",
+      "Former et informer le personnel sur les bonnes pratiques en matière de radioprotection.",
+    ],
   },
   {
-    period: "2019 \u2014 2021",
-    title: "Junior Backend Developer",
-    org: "Startify",
+    period: "Javnvier 2020 \u2014 Septembre 2023",
+    title: "Etudiant en Radioprotection",
+    org: "INSTN Madagascar",
     description:
-      "Built REST APIs, wrote integration tests, and contributed to the transition from legacy SOAP services to modern RESTful architecture.",
+        "Études fondamentaux des sciences physiques et de la radioprotection pour la prévention des risques des rayonnements ionisants.",
   },
 ];
 
@@ -27,9 +30,9 @@ export function Career() {
     <section id="career" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 3
+        INPUT 2
       </span>
-      <h2 className="section-title mt-3">Career</h2>
+      <h2 className="section-title mt-3">Carrière</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
 
       <div className="space-y-6">
@@ -46,9 +49,17 @@ export function Career() {
             <p className="mt-0.5 text-sm font-semibold text-accent">
               {role.org}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {role.description}
-            </p>
+            {Array.isArray(role.description) ? (
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-muted-foreground">
+                {role.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {role.description}
+              </p>
+            )}
           </div>
         ))}
       </div>
