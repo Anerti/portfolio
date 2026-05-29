@@ -7,10 +7,10 @@ import { ChevronRight, Menu, X } from "lucide-react";
 
 const sections = [
   { id: "about", label: "À propos" },
-  { id: "career", label: "Carrière" },
   { id: "skills", label: "Compétences" },
   { id: "projects", label: "Projets" },
   { id: "writeups", label: "Articles" },
+  { id: "career", label: "Carrière" },
   { id: "contact", label: "Contact" },
 ];
 

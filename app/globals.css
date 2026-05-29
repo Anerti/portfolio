@@ -159,3 +159,25 @@
     rgba(0, 0, 0, 0.03) 4px
   );
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #495057;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C757D;
+}
+
+html {
+  scrollbar-color: #495057 #212529;
+  scrollbar-width: thin;
+}
