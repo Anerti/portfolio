@@ -97,7 +97,7 @@ export function Skills() {
               <h3 className="mb-1 text-center font-heading text-sm tracking-wide text-foreground">
                 Soft Skills
               </h3>
-              <div className="h-[350px] sm:h-[420px] lg:h-[480px]">
+              <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart
                     data={softSkills}
@@ -109,7 +109,7 @@ export function Skills() {
                     <PolarGrid stroke="#495057" strokeOpacity={0.3} />
                     <PolarAngleAxis
                       dataKey="skill"
-                      tick={{ fill: "#ADB5BD", fontSize: 13, fontFamily: "Space Grotesk" }}
+                      tick={{ fill: "#262A2D", fontSize: 13, fontFamily: "Space Grotesk" }}
                       tickSize={6}
                     />
                     <PolarRadiusAxis
@@ -135,7 +135,7 @@ export function Skills() {
                       dataKey="value"
                       fill="#6C757D"
                       fillOpacity={0.15}
-                      dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
+                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -165,7 +165,7 @@ export function Skills() {
                   Frameworks & Tools
                 </button>
               </div>
-              <div className="h-[350px] sm:h-[420px] lg:h-[480px]">
+              <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart
                     data={hardTab === 0 ? langSkills : frameworkSkills}
@@ -177,7 +177,7 @@ export function Skills() {
                     <PolarGrid stroke="#495057" strokeOpacity={0.3} />
                     <PolarAngleAxis
                       dataKey="skill"
-                      tick={{ fill: "#ADB5BD", fontSize: 11, fontFamily: "Space Grotesk" }}
+                      tick={{ fill: "#262A2D", fontSize: 11, fontFamily: "Space Grotesk" }}
                       tickSize={5}
                     />
                     <PolarRadiusAxis
@@ -203,7 +203,7 @@ export function Skills() {
                       dataKey="value"
                       fill="#6C757D"
                       fillOpacity={0.15}
-                      dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
+                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -228,13 +228,13 @@ export function Skills() {
                   Anglais
                 </span>
               </div>
-              <div className="h-[350px] sm:h-[420px] lg:h-[480px]">
+              <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={langData} cx="50%" cy="50%" outerRadius="75%">
                     <PolarGrid gridType="polygon" stroke="#495057" strokeOpacity={0.3} />
                     <PolarAngleAxis
                       dataKey="skill"
-                      tick={{ fill: "#ADB5BD", fontSize: 12, fontFamily: "Space Grotesk" }}
+                      tick={{ fill: "#262A2D", fontSize: 12, fontFamily: "Space Grotesk" }}
                       tickSize={5}
                     />
                     <Tooltip
@@ -253,21 +253,21 @@ export function Skills() {
                       dataKey="malagasy"
                       fill="#5BC0BE"
                       fillOpacity={0.15}
-                      dot={{ r: 5, fill: "#5BC0BE", stroke: "#F8F9FA", strokeWidth: 1.5 }}
+                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#5BC0BE", strokeWidth: 0.5 }}
                     />
                     <Radar
                       name="Français"
                       dataKey="francais"
                       fill="#6C757D"
                       fillOpacity={0.15}
-                      dot={{ r: 5, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1.5 }}
+                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
                     />
                     <Radar
                       name="Anglais"
                       dataKey="anglais"
                       fill="#E6A817"
                       fillOpacity={0.12}
-                      dot={{ r: 5, fill: "#E6A817", stroke: "#F8F9FA", strokeWidth: 1.5 }}
+                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#E6A817", strokeWidth: 0.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -282,7 +282,7 @@ export function Skills() {
                 <p className="mb-1 text-center font-heading text-xs uppercase tracking-[0.15em] text-muted-foreground">
                   IT
                 </p>
-                  <div className="h-[350px] sm:h-[420px] lg:h-[480px]">
+                  <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
                     <ResponsiveContainer width="100%" height="100%">
                       <RadarChart
                         data={itSkills}
@@ -294,7 +294,7 @@ export function Skills() {
                         <PolarGrid stroke="#495057" strokeOpacity={0.25} />
                         <PolarAngleAxis
                           dataKey="skill"
-                          tick={{ fill: "#ADB5BD", fontSize: 12, fontFamily: "Space Grotesk" }}
+                          tick={{ fill: "#262A2D", fontSize: 12, fontFamily: "Space Grotesk" }}
                           tickSize={4}
                         />
                         <Tooltip
@@ -314,7 +314,7 @@ export function Skills() {
                           dataKey="value"
                           fill="#6C757D"
                           fillOpacity={0.15}
-                          dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
+                          dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
                         />
                       </RadarChart>
                     </ResponsiveContainer>
