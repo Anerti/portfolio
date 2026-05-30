@@ -1,10 +1,19 @@
+import Image from "next/image";
+
 const roles = [
   {
     period: "Janvier 2025 \u2014 Actuellement",
     title: "Etudiant en informatique",
     org: "HEI Madagascar",
     description:
-      "Conception et développement d'un service d'orchestration de paiement en temps réel et migration d'un monolithe vers des microservices.",
+      "Acquisition des fondamentaux couvrant le développement frontend et backend, le DevOps, les réseaux, les systèmes, le data engineering et le cloud computing.",
+  },
+  {
+    period: "Novembre 2023",
+    title: "Technicien en Radioprotection",
+    org: "INSTN Madagascar",
+    description:
+        "Titulaire d'une Licence en Radioprotection.",
   },
   {
     period: "Mars 2023 \u2014 Juin 2023",
@@ -27,10 +36,18 @@ const roles = [
 
 export function Career() {
   return (
-    <section id="career" className="flex min-h-screen flex-col justify-center scroll-mt-24">
+    <section id="career" className="relative flex min-h-screen flex-col justify-center overflow-hidden scroll-mt-24">
+      <Image
+        src="/road-bg.svg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-contain opacity-[0.08]"
+        aria-hidden
+      />
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 2
+        INPUT 5
       </span>
       <h2 className="section-title mt-3">Carrière</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
