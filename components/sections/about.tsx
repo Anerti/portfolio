@@ -33,6 +33,7 @@ export function About() {
           alt="Profile picture"
           width={160}
           height={160}
+          priority
           className="size-40 shrink-0 rounded-full object-cover grayscale"
         />
         <p className="max-w-2xl text-center text-base leading-[1.75] text-muted-foreground">
