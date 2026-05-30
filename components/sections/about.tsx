@@ -40,14 +40,6 @@ export function About() {
         </p>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
-        {platforms.map((p) => (
-          <Link key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="opacity-60 transition-opacity hover:opacity-100" aria-label={p.label}>
-            <Image src={p.src} alt="" width={28} height={28} className="size-7" />
-          </Link>
-        ))}
-      </div>
-
       <div className="mt-8 flex flex-col items-center gap-1">
         <Image
           src="/signature.svg"
@@ -59,6 +51,14 @@ export function About() {
         <span className="font-heading text-sm tracking-wider text-foreground text-center">
           Ervin ANDRIANOMBANA
         </span>
+      </div>
+
+      <div className="absolute bottom-8 right-8 flex flex-wrap items-center justify-end gap-4">
+        {platforms.map((p) => (
+          <Link key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="opacity-40 transition-opacity hover:opacity-80" aria-label={p.label}>
+            <Image src={p.src} alt="" width={22} height={22} className="size-5.5" />
+          </Link>
+        ))}
       </div>
     </section>
   );
