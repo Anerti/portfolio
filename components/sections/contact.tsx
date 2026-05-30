@@ -46,8 +46,8 @@ export function Contact() {
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
 
       <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
-        Vous pouvez me joindre via les canaux ci-dessous. Je m&apos;efforce de
-        répondre sous quinzaine.
+        Vous cherchez un ingénieur backend&nbsp;? Parlons de votre prochain
+        projet.
       </p>
 
       <form
@@ -63,7 +63,7 @@ export function Contact() {
               id="firstName"
               name="firstName"
               type="text"
-              placeholder="Jean"
+              placeholder="Prénom"
               required
               className="w-full border-2 border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors duration-200 focus:border-accent"
             />
@@ -76,7 +76,7 @@ export function Contact() {
               id="lastName"
               name="lastName"
               type="text"
-              placeholder="Dupont"
+              placeholder="Nom"
               required
               className="w-full border-2 border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors duration-200 focus:border-accent"
             />
@@ -91,7 +91,21 @@ export function Contact() {
             id="email"
             name="email"
             type="email"
-            placeholder="vous@exemple.com"
+              placeholder="email@exemple.com"
+            required
+            className="w-full border-2 border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors duration-200 focus:border-accent"
+          />
+        </div>
+
+        <div className="space-y-1.5">
+          <label htmlFor="subject" className="font-heading text-[10px] uppercase tracking-[0.15em] text-muted-foreground">
+            Objet
+          </label>
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            placeholder="Objet"
             required
             className="w-full border-2 border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors duration-200 focus:border-accent"
           />
@@ -105,7 +119,7 @@ export function Contact() {
             id="message"
             name="message"
             rows={5}
-            placeholder="Votre message..."
+            placeholder="Message"
             required
             className="w-full resize-none border-2 border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors duration-200 focus:border-accent"
           />

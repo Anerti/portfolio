@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ChevronRight, Menu, X } from "lucide-react";
 
 const sections = [
@@ -16,39 +18,8 @@ const sections = [
 
 export function Sidebar() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("about");
-
-  useEffect(() => {
-    const ids = sections.map((s) => s.id);
-    const observers: IntersectionObserver[] = [];
-
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActive(id);
-            }
-          });
-        },
-        { rootMargin: "-40% 0px -55% 0px" }
-      );
-
-      observer.observe(el);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
-  }, []);
-
-  const scrollTo = (id: string) => {
-    setActive(id);
-    setOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+  const pathname = usePathname();
+  const active = pathname.split("/").filter(Boolean)[0] || "about";
 
   return (
     <>
@@ -86,9 +57,10 @@ export function Sidebar() {
 
           <nav className="flex-1 space-y-1">
             {sections.map((s) => (
-              <button
+              <Link
                 key={s.id}
-                onClick={() => scrollTo(s.id)}
+                href={`/${s.id}`}
+                onClick={() => setOpen(false)}
                 className={cn(
                   "flex w-full items-center gap-3 rounded-sm px-3 py-2.5 text-left text-sm transition-all duration-150",
                   active === s.id
@@ -106,7 +78,7 @@ export function Sidebar() {
                   )}
                 />
                 {s.label}
-              </button>
+              </Link>
             ))}
           </nav>
 

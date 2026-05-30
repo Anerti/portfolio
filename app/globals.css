@@ -137,7 +137,7 @@
   content: "█";
   animation: blink 1s step-end infinite;
   @apply ml-0.5 text-accent/60 font-black;
-  text-shadow: 0 0 0.5px currentColor, 0 0 0.5px currentColor;
+  text-shadow: 0 0 1px currentColor, 0 0 1px currentColor;
 }
 
 @keyframes blink {
