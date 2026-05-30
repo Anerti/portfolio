@@ -133,6 +133,17 @@
   @apply font-heading text-3xl font-semibold uppercase tracking-[0.15em] text-foreground;
 }
 
+.section-title::after {
+  content: "█";
+  animation: blink 1s step-end infinite;
+  @apply ml-0.5 text-accent/60 font-black;
+  text-shadow: 0 0 0.5px currentColor, 0 0 0.5px currentColor;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 .card-tv {
   @apply border-2 border-border bg-card p-6 transition-all duration-200;
 }
