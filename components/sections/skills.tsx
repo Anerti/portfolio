@@ -13,12 +13,11 @@ import {
 } from "recharts";
 
 const softSkills = [
-  { skill: "Résolution", value: 90 },
-  { skill: "Communication", value: 75 },
-  { skill: "Travail équipe", value: 85 },
-  { skill: "Adaptabilité", value: 80 },
-  { skill: "Gestion temps", value: 70 },
-  { skill: "Esprit critique", value: 88 },
+  { skill: "Communication", value: 50 },
+  { skill: "Travail équipe", value: 72 },
+  { skill: "Adaptabilité", value: 77 },
+  { skill: "Gestion temps", value: 63 },
+  { skill: "Esprit analytique", value: 60 },
 ];
 
 const hardSkills = [
