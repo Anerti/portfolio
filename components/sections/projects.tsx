@@ -1,27 +1,29 @@
+import Image from "next/image";
+
+const techIcons: Record<string, string> = {
+  TypeScript: "/icons/logo/typescript-logo.svg",
+  "Next.js": "/icons/logo/nextjs-logo.svg",
+  Java: "/icons/logo/java-logo.svg",
+  "Spring Boot": "/icons/logo/spring-logo.svg",
+  PostgreSQL: "/icons/logo/postgresql-logo.svg",
+  React: "/icons/logo/react-logo.svg",
+  ExpressJS: "/icons/logo/expressjs-logo.svg",
+};
+
 const projects = [
   {
-    title: "Service de Passerelle de Paiement",
-    year: "2024",
+    title: "EventSync",
+    year: "2026",
     description:
-      "Un service d'orchestration de paiement à haut débit et faible latence gérant 10 000+ transactions par seconde avec garanties d'idempotence.",
+      "système de gestion d'événements permettant d'organiser et de suivre les événements, sessions, salles, intervenants et questions-réponses.",
+    stack: ["TypeScript", "Next.js", "Java", "Spring Boot", "PostgreSQL"],
   },
   {
-    title: "Pipeline d'Analyse en Temps Réel",
-    year: "2023",
+    title: "Tetibola",
+    year: "2025",
     description:
-      "Pipeline basé sur Kafka Streams traitant 2 millions+ d'événements par jour avec une latence inférieure à la seconde.",
-  },
-  {
-    title: "Kit de Migration vers les Microservices",
-    year: "2022",
-    description:
-      "Un outil interne et framework de migration qui a réduit le temps de basculement du monolithe aux microservices de semaines à jours.",
-  },
-  {
-    title: "Open Source : Retry4j",
-    year: "2021",
-    description:
-      "Une bibliothèque Java pour les politiques de réessai déclaratives avec backoff exponentiel, circuit breakers et intégration de métriques.",
+      "Solution de gestion financière personnelle où l'utilisateur peut enregistrer, visualiser et supprimer ses dépenses, les classer par catégorie et date, et accéder à ses données en toute sécurité grâce à un système d'authentification.",
+    stack: ["React", "TypeScript", "ExpressJS", "PostgreSQL"],
   },
 ];
 
@@ -30,7 +32,7 @@ export function Projects() {
     <section id="projects" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 4
+        INPUT 3
       </span>
       <h2 className="section-title mt-3">Projets</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
@@ -49,6 +51,21 @@ export function Projects() {
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {project.description}
             </p>
+            {project.stack && (
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                {project.stack.map((tech) => (
+                  <Image
+                    key={tech}
+                    src={techIcons[tech]}
+                    alt={tech}
+                    width={20}
+                    height={20}
+                    className="size-5 opacity-60"
+                    title={tech}
+                  />
+                ))}
+              </div>
+            )}
           </article>
         ))}
       </div>
