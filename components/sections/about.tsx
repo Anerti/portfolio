@@ -56,7 +56,7 @@ export function About() {
       <div className="absolute bottom-8 right-8 flex flex-wrap items-center justify-end gap-4">
         {platforms.map((p) => (
           <Link key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="opacity-40 transition-opacity hover:opacity-80" aria-label={p.label}>
-            <Image src={p.src} alt="" width={22} height={22} className="size-5.5" />
+            <Image src={p.src} alt="" width={28} height={28} className="size-7" />
           </Link>
         ))}
       </div>
