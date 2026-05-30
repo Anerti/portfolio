@@ -261,11 +261,10 @@ export function Skills() {
               <h3 className="mb-1 text-center font-heading text-sm tracking-wide text-foreground">
                 Compétences Générales
               </h3>
-              <div className="mx-auto max-w-xs">
-                <div>
-                  <p className="mb-1 text-center font-heading text-xs uppercase tracking-[0.15em] text-muted-foreground">
-                    IT
-                  </p>
+              <div className="mx-auto w-full">
+                <p className="mb-1 text-center font-heading text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                  IT
+                </p>
                   <div className="h-[350px] sm:h-[420px] lg:h-[480px]">
                     <ResponsiveContainer width="100%" height="100%">
                       <RadarChart
@@ -304,7 +303,6 @@ export function Skills() {
                         />
                       </RadarChart>
                     </ResponsiveContainer>
-                  </div>
                 </div>
               </div>
             </div>
