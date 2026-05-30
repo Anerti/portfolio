@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import { submitContact } from "@/lib/actions";
 
 function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -33,6 +32,7 @@ export function Contact() {
         src="/world-bg.svg"
         alt=""
         fill
+        sizes="100vw"
         className="pointer-events-none object-contain"
         aria-hidden
       />
@@ -51,8 +51,8 @@ export function Contact() {
       </p>
 
       <form
+        action={submitContact}
         className="mt-8 space-y-5"
-        onSubmit={(e) => e.preventDefault()}
       >
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div className="space-y-1.5">

@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import { Career } from "@/components/sections/career";
+
+export const metadata: Metadata = {
+  title: "Carrière",
+  description: "Parcours professionnel et formation",
+};
 
 export default function CareerPage() {
   return (

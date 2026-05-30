@@ -68,6 +68,7 @@ export function Skills() {
         src="/tree-bg.svg"
         alt=""
         fill
+        sizes="100vw"
         className="pointer-events-none object-contain opacity-[0.08]"
         aria-hidden
       />
@@ -78,7 +79,7 @@ export function Skills() {
       <h2 className="section-title mt-3">Compétences</h2>
       <div className="mt-1 mb-16 h-0.5 w-16 bg-accent" />
 
-      <div className="relative mx-auto w-full max-w-lg md:max-w-2xl lg:max-w-4xl px-4">
+      <div className="relative mx-auto w-full">
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
