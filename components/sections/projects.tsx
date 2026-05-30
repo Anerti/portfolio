@@ -22,7 +22,7 @@ const projects = [
     title: "Tetibola",
     year: "2025",
     description:
-      "Solution de gestion financière personnelle où l'utilisateur peut enregistrer, visualiser et supprimer ses dépenses, les classer par catégorie et date, et accéder à ses données en toute sécurité grâce à un système d'authentification.",
+      "Application de gestion de dépenses personnelles — ajout, consultation, suppression, classement par catégorie et date, le tout sécurisé par authentification.",
     stack: ["React", "TypeScript", "ExpressJS", "PostgreSQL"],
   },
 ];
@@ -58,9 +58,9 @@ export function Projects() {
                     key={tech}
                     src={techIcons[tech]}
                     alt={tech}
-                    width={20}
-                    height={20}
-                    className="size-5 opacity-60"
+                    width={24}
+                    height={24}
+                    className="size-6"
                     title={tech}
                   />
                 ))}

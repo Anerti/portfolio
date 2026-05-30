@@ -61,10 +61,6 @@ const slides = [
   { id: "general", label: "Générales" },
 ];
 
-const hardTabs = [
-  { id: "lang", label: "Languages" },
-  { id: "framework", label: "Frameworks & Tools" },
-];
 
 export function Skills() {
   const [current, setCurrent] = useState(0);
@@ -82,7 +78,7 @@ export function Skills() {
       />
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 3
+        INPUT 2
       </span>
       <h2 className="section-title mt-3">Compétences</h2>
       <div className="mt-1 mb-16 h-0.5 w-16 bg-accent" />

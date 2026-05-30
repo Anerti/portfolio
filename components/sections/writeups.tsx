@@ -24,7 +24,7 @@ export function Writeups() {
     <section id="writeups" className="flex min-h-screen flex-col justify-center scroll-mt-24">
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
-        INPUT 5
+        INPUT 4
       </span>
       <h2 className="section-title mt-3">Articles</h2>
       <div className="mt-2 mb-8 h-0.5 w-16 bg-accent" />
