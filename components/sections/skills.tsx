@@ -13,11 +13,11 @@ import {
 } from "recharts";
 
 const softSkills = [
-  { skill: "Communication", value: 50 },
+  { skill: "Curiosité", value: 87 },
   { skill: "Travail équipe", value: 72 },
   { skill: "Adaptabilité", value: 77 },
   { skill: "Gestion temps", value: 63 },
-  { skill: "Esprit analytique", value: 60 },
+  { skill: "Esprit analytique", value: 77 },
 ];
 
 const hardSkills = [
@@ -36,19 +36,19 @@ const hardSkills = [
 
 const itSkills = [
   { skill: "Backend", value: 92 },
-  { skill: "Frontend", value: 60 },
-  { skill: "DevOps", value: 70 },
-  { skill: "Cybersécu.", value: 80 },
-  { skill: "IA", value: 50 },
-  { skill: "Réseau", value: 65 },
+  { skill: "Frontend", value: 48 },
+  { skill: "DevOps", value: 43 },
+  { skill: "Cybersécu.", value: 78 },
+  { skill: "IA", value: 53 },
+  { skill: "Réseau", value: 60 },
 ];
 
 const langData = [
-  { skill: "Expression", malagasy: 100, francais: 85, anglais: 70 },
-  { skill: "Écoute", malagasy: 100, francais: 90, anglais: 75 },
-  { skill: "Lecture", malagasy: 90, francais: 88, anglais: 80 },
-  { skill: "Écriture", malagasy: 85, francais: 80, anglais: 65 },
-  { skill: "Moyenne", malagasy: 94, francais: 86, anglais: 73 },
+  { skill: "Expression", malagasy: 57, francais: 69, anglais: 45 },
+  { skill: "Écoute", malagasy: 70, francais: 77, anglais: 49 },
+  { skill: "Lecture", malagasy: 74, francais: 95, anglais: 87 },
+  { skill: "Écriture", malagasy: 67, francais: 85, anglais: 54 },
+  { skill: "Moyenne", malagasy: 67, francais: 82, anglais: 59 },
 ];
 
 const slides = [
@@ -124,10 +124,8 @@ export function Skills() {
                     <Radar
                       name="Soft Skills"
                       dataKey="value"
-                      stroke="#6C757D"
                       fill="#6C757D"
                       fillOpacity={0.15}
-                      strokeWidth={1.5}
                       dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
                     />
                   </RadarChart>
@@ -175,10 +173,8 @@ export function Skills() {
                     <Radar
                       name="Hard Skills"
                       dataKey="value"
-                      stroke="#6C757D"
                       fill="#6C757D"
                       fillOpacity={0.15}
-                      strokeWidth={1.5}
                       dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
                     />
                   </RadarChart>
@@ -192,15 +188,15 @@ export function Skills() {
               </h3>
               <div className="flex items-center justify-center gap-6 text-[10px] font-heading uppercase tracking-[0.1em]">
                 <span className="flex items-center gap-1.5">
-                  <span className="inline-block size-2 rounded-full" style={{ backgroundColor: "#CED4DA" }} />
+                  <span className="inline-block size-2 rounded-full" style={{ backgroundColor: "#5BC0BE" }} />
                   Malagasy
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="inline-block size-2 rounded-full" style={{ backgroundColor: "#6C757D" }} />
+                  <span className="inline-block size-2 rounded-full bg-[#6C757D]" />
                   Français
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="inline-block size-2 rounded-full" style={{ backgroundColor: "#212529" }} />
+                  <span className="inline-block size-2 rounded-full" style={{ backgroundColor: "#E6A817" }} />
                   Anglais
                 </span>
               </div>
@@ -227,29 +223,23 @@ export function Skills() {
                     <Radar
                       name="Malagasy"
                       dataKey="malagasy"
-                      stroke="#CED4DA"
-                      fill="#CED4DA"
+                      fill="#5BC0BE"
                       fillOpacity={0.15}
-                      strokeWidth={2}
-                      dot={{ r: 4, fill: "#CED4DA", stroke: "#F8F9FA", strokeWidth: 1 }}
+                      dot={{ r: 5, fill: "#5BC0BE", stroke: "#F8F9FA", strokeWidth: 1.5 }}
                     />
                     <Radar
                       name="Français"
                       dataKey="francais"
-                      stroke="#6C757D"
                       fill="#6C757D"
-                      fillOpacity={0.2}
-                      strokeWidth={2}
-                      dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
+                      fillOpacity={0.15}
+                      dot={{ r: 5, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1.5 }}
                     />
                     <Radar
                       name="Anglais"
                       dataKey="anglais"
-                      stroke="#212529"
-                      fill="#495057"
+                      fill="#E6A817"
                       fillOpacity={0.12}
-                      strokeWidth={2}
-                      dot={{ r: 4.5, fill: "#212529", stroke: "#F8F9FA", strokeWidth: 1 }}
+                      dot={{ r: 5, fill: "#E6A817", stroke: "#F8F9FA", strokeWidth: 1.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -294,10 +284,8 @@ export function Skills() {
                         <Radar
                           name="IT"
                           dataKey="value"
-                          stroke="#6C757D"
                           fill="#6C757D"
                           fillOpacity={0.15}
-                          strokeWidth={1.5}
                           dot={{ r: 4, fill: "#6C757D", stroke: "#F8F9FA", strokeWidth: 1 }}
                         />
                       </RadarChart>
