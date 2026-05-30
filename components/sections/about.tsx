@@ -1,4 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const platforms = [
+  { href: "https://tryhackme.com/p/Anerti", src: "/icons/tryhackme-icon.svg", label: "TryHackMe" },
+  { href: "https://profile.hackthebox.com/profile/019e5bb5-45e0-710e-ba8d-c2e25978e0bf", src: "/icons/hackthebox-icon.svg", label: "HackTheBox" },
+  { href: "https://exercism.org/profiles/Anerti", src: "/icons/exercism-icon.svg", label: "Exercism" },
+  { href: "https://www.freecodecamp.org/anerti", src: "/icons/freecodecamp-icon.svg", label: "freeCodeCamp" },
+  { href: "https://github.com/Anerti", src: "/icons/github-icon.svg", label: "GitHub" },
+];
 
 export function About() {
   return (
@@ -29,6 +38,14 @@ export function About() {
         <p className="max-w-2xl text-center text-base leading-[1.75] text-muted-foreground">
             Développeur backend spécialisé Java / Spring Boot / PostgreSQL, je conçois des architectures sécurisées et mets à profit TryHackMe, pwn.college et HackTheBox pour renforcer mes compétences en cybersécurité.
         </p>
+      </div>
+
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
+        {platforms.map((p) => (
+          <Link key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="opacity-60 transition-opacity hover:opacity-100" aria-label={p.label}>
+            <Image src={p.src} alt="" width={28} height={28} className="size-7" />
+          </Link>
+        ))}
       </div>
 
       <div className="mt-8 flex flex-col items-center gap-1">
