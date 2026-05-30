@@ -22,19 +22,19 @@ const softSkills = [
 
 const langSkills = [
   { skill: "Java", value: 90 },
-  { skill: "JavaScript", value: 75 },
-  { skill: "Python", value: 70 },
-  { skill: "Bash", value: 80 },
-  { skill: "SQL", value: 85 },
+  { skill: "JavaScript", value: 91 },
+  { skill: "Python", value: 63 },
+  { skill: "Bash", value: 58 },
+  { skill: "SQL", value: 83 },
 ];
 
 const frameworkSkills = [
-  { skill: "Spring Boot", value: 90 },
-  { skill: "ExpressJS", value: 65 },
-  { skill: "Git", value: 85 },
-  { skill: "PostgreSQL", value: 88 },
-  { skill: "Burp Suite", value: 75 },
-  { skill: "Linux", value: 82 },
+  { skill: "Spring Boot", value: 79 },
+  { skill: "ExpressJS", value: 63 },
+  { skill: "Git", value: 61 },
+  { skill: "PostgreSQL", value: 72 },
+  { skill: "Burp Suite", value: 61 },
+  { skill: "Linux", value: 85 },
 ];
 
 const itSkills = [
