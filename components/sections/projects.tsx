@@ -52,17 +52,24 @@ export function Projects() {
               {project.description}
             </p>
             {project.stack && (
-              <div className="mt-4 flex flex-wrap items-center gap-3">
+              <div className="mt-4 flex flex-wrap items-center gap-2.5">
                 {project.stack.map((tech) => (
-                  <Image
+                  <span
                     key={tech}
-                    src={techIcons[tech]}
-                    alt={tech}
-                    width={28}
-                    height={28}
-                    className="size-7"
-                    title={tech}
-                  />
+                    className="inline-flex items-center gap-1.5 rounded-md border border-border bg-muted/50 px-2 py-1"
+                  >
+                    <Image
+                      src={techIcons[tech]}
+                      alt={tech}
+                      width={16}
+                      height={16}
+                      className="size-4 shrink-0"
+                      unoptimized
+                    />
+                    <span className="font-heading text-[11px] tracking-wide text-muted-foreground">
+                      {tech}
+                    </span>
+                  </span>
                 ))}
               </div>
             )}
