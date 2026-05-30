@@ -20,12 +20,15 @@ const softSkills = [
   { skill: "Esprit analytique", value: 77 },
 ];
 
-const hardSkills = [
+const langSkills = [
   { skill: "Java", value: 90 },
   { skill: "JavaScript", value: 75 },
   { skill: "Python", value: 70 },
   { skill: "Bash", value: 80 },
   { skill: "SQL", value: 85 },
+];
+
+const frameworkSkills = [
   { skill: "Spring Boot", value: 90 },
   { skill: "ExpressJS", value: 65 },
   { skill: "Git", value: 85 },
@@ -58,8 +61,14 @@ const slides = [
   { id: "general", label: "Générales" },
 ];
 
+const hardTabs = [
+  { id: "lang", label: "Languages" },
+  { id: "framework", label: "Frameworks & Tools" },
+];
+
 export function Skills() {
   const [current, setCurrent] = useState(0);
+  const [hardTab, setHardTab] = useState(0);
 
   return (
     <section id="skills" className="relative flex min-h-screen flex-col justify-center overflow-hidden scroll-mt-24">
@@ -134,13 +143,32 @@ export function Skills() {
             </div>
 
             <div className="min-w-0 w-full shrink-0">
-              <h3 className="mb-1 text-center font-heading text-sm tracking-wide text-foreground">
-                Hard Skills
-              </h3>
+              <div className="mb-3 flex items-center justify-center gap-2">
+                <button
+                  onClick={() => setHardTab(0)}
+                  className={`rounded-sm px-3 py-1.5 font-heading text-[10px] uppercase tracking-[0.15em] transition-all duration-200 ${
+                    hardTab === 0
+                      ? "bg-sidebar-primary text-sidebar shadow-[0_0_4px] shadow-sidebar-primary"
+                      : "text-muted-foreground hover:text-foreground border border-sidebar-border"
+                  }`}
+                >
+                  Languages
+                </button>
+                <button
+                  onClick={() => setHardTab(1)}
+                  className={`rounded-sm px-3 py-1.5 font-heading text-[10px] uppercase tracking-[0.15em] transition-all duration-200 ${
+                    hardTab === 1
+                      ? "bg-sidebar-primary text-sidebar shadow-[0_0_4px] shadow-sidebar-primary"
+                      : "text-muted-foreground hover:text-foreground border border-sidebar-border"
+                  }`}
+                >
+                  Frameworks & Tools
+                </button>
+              </div>
               <div className="h-[350px] sm:h-[420px] lg:h-[480px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart
-                    data={hardSkills}
+                    data={hardTab === 0 ? langSkills : frameworkSkills}
                     cx="50%"
                     cy="50%"
                     outerRadius="80%"
