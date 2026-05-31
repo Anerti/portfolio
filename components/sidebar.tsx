@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { ChevronRight, Menu, X } from "lucide-react";
+import { ChevronRight, Download, Menu, X } from "lucide-react";
 
 const sections = [
   { id: "about", label: "À propos" },
@@ -82,14 +82,16 @@ export function Sidebar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 border-t-2 border-sidebar-border pt-6">
-            <span className="inline-block size-2 animate-pulse rounded-full bg-sidebar-primary shadow-[0_0_6px] shadow-sidebar-primary" />
-            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.2em] text-sidebar-primary">
-              ON AIR
-            </span>
-            <span className="ml-auto font-heading text-[10px] uppercase tracking-[0.2em] text-sidebar-foreground/30">
-              LIVE
-            </span>
+          <div className="border-t-2 border-sidebar-border pt-6">
+            <a
+              href="/CV.pdf"
+              download
+              onClick={() => setOpen(false)}
+              className="flex w-full items-center gap-3 rounded-sm px-3 py-2.5 text-left text-sm transition-all duration-150 bg-[#F8F9FA] text-[#212529] hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
+            >
+              <Download size={14} className="shrink-0" />
+              Télécharger CV
+            </a>
           </div>
         </div>
       </aside>
