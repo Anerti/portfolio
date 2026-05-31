@@ -102,10 +102,10 @@ export function Skills() {
                     outerRadius="85%"
                     margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
                   >
-                    <PolarGrid stroke="#495057" strokeOpacity={0.3} />
+                    <PolarGrid stroke="#8A8580" strokeOpacity={0.3} />
                     <PolarAngleAxis
                       dataKey="skill"
-                      tick={{ fill: "#262A2D", fontSize: 13, fontFamily: "Space Grotesk" }}
+                      tick={{ fill: "#2C2C2C", fontSize: 13, fontFamily: "Space Grotesk" }}
                       tickSize={6}
                     />
                     <PolarRadiusAxis
@@ -116,22 +116,22 @@ export function Skills() {
                     />
                     <Tooltip
                       contentStyle={{
-                        background: "#212529",
-                        border: "1px solid #495057",
+                        background: "#2C2C2C",
+                        border: "1px solid #8A8580",
                         borderRadius: 0,
                         fontSize: 12,
                         fontFamily: "Space Grotesk",
-                        color: "#F8F9FA",
+                        color: "#F5F0E8",
                       }}
-                      labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#ADB5BD" }}
+                      labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#D4CFC7" }}
                       formatter={(value) => [`${value}%`, "Niveau"]}
                     />
                     <Radar
                       name="Soft Skills"
                       dataKey="value"
-                      fill="#6C757D"
+                      fill="#8A8580"
                       fillOpacity={0.15}
-                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
+                      dot={{ r: 3, fill: "#F5F0E8", stroke: "#8A8580", strokeWidth: 0.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -170,10 +170,10 @@ export function Skills() {
                     outerRadius="80%"
                     margin={{ top: 10, right: 30, bottom: 10, left: 30 }}
                   >
-                    <PolarGrid stroke="#495057" strokeOpacity={0.3} />
+                    <PolarGrid stroke="#8A8580" strokeOpacity={0.3} />
                     <PolarAngleAxis
                       dataKey="skill"
-                      tick={{ fill: "#262A2D", fontSize: 11, fontFamily: "Space Grotesk" }}
+                      tick={{ fill: "#2C2C2C", fontSize: 11, fontFamily: "Space Grotesk" }}
                       tickSize={5}
                     />
                     <PolarRadiusAxis
@@ -184,22 +184,22 @@ export function Skills() {
                     />
                     <Tooltip
                       contentStyle={{
-                        background: "#212529",
-                        border: "1px solid #495057",
+                        background: "#2C2C2C",
+                        border: "1px solid #8A8580",
                         borderRadius: 0,
                         fontSize: 12,
                         fontFamily: "Space Grotesk",
-                        color: "#F8F9FA",
+                        color: "#F5F0E8",
                       }}
-                      labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#ADB5BD" }}
+                      labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#D4CFC7" }}
                       formatter={(value) => [`${value}%`, "Niveau"]}
                     />
                     <Radar
                       name="Hard Skills"
                       dataKey="value"
-                      fill="#6C757D"
+                      fill="#8A8580"
                       fillOpacity={0.15}
-                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
+                      dot={{ r: 3, fill: "#F5F0E8", stroke: "#8A8580", strokeWidth: 0.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -216,7 +216,7 @@ export function Skills() {
                   Malagasy
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="inline-block size-2 rounded-full bg-[#6C757D]" />
+                  <span className="inline-block size-2 rounded-full bg-[#8A8580]" />
                   Français
                 </span>
                 <span className="flex items-center gap-1.5">
@@ -227,43 +227,43 @@ export function Skills() {
               <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
                 <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                   <RadarChart data={langData} cx="50%" cy="50%" outerRadius="75%">
-                    <PolarGrid gridType="polygon" stroke="#495057" strokeOpacity={0.3} />
+                    <PolarGrid gridType="polygon" stroke="#8A8580" strokeOpacity={0.3} />
                     <PolarAngleAxis
                       dataKey="skill"
-                      tick={{ fill: "#262A2D", fontSize: 12, fontFamily: "Space Grotesk" }}
+                      tick={{ fill: "#2C2C2C", fontSize: 12, fontFamily: "Space Grotesk" }}
                       tickSize={5}
                     />
                     <Tooltip
                       contentStyle={{
-                        background: "#212529",
-                        border: "1px solid #495057",
+                        background: "#2C2C2C",
+                        border: "1px solid #8A8580",
                         borderRadius: 0,
                         fontSize: 12,
                         fontFamily: "Space Grotesk",
-                        color: "#F8F9FA",
+                        color: "#F5F0E8",
                       }}
-                      labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#ADB5BD" }}
+                      labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#D4CFC7" }}
                     />
                     <Radar
                       name="Malagasy"
                       dataKey="malagasy"
                       fill="#5BC0BE"
                       fillOpacity={0.15}
-                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#5BC0BE", strokeWidth: 0.5 }}
+                      dot={{ r: 3, fill: "#F5F0E8", stroke: "#5BC0BE", strokeWidth: 0.5 }}
                     />
                     <Radar
                       name="Français"
                       dataKey="francais"
-                      fill="#6C757D"
+                      fill="#8A8580"
                       fillOpacity={0.15}
-                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
+                      dot={{ r: 3, fill: "#F5F0E8", stroke: "#8A8580", strokeWidth: 0.5 }}
                     />
                     <Radar
                       name="Anglais"
                       dataKey="anglais"
                       fill="#E6A817"
                       fillOpacity={0.12}
-                      dot={{ r: 3, fill: "#F8F9FA", stroke: "#E6A817", strokeWidth: 0.5 }}
+                      dot={{ r: 3, fill: "#F5F0E8", stroke: "#E6A817", strokeWidth: 0.5 }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -287,30 +287,30 @@ export function Skills() {
                         outerRadius="80%"
                         margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
                       >
-                        <PolarGrid stroke="#495057" strokeOpacity={0.25} />
+                        <PolarGrid stroke="#8A8580" strokeOpacity={0.25} />
                         <PolarAngleAxis
                           dataKey="skill"
-                          tick={{ fill: "#262A2D", fontSize: 12, fontFamily: "Space Grotesk" }}
+                          tick={{ fill: "#2C2C2C", fontSize: 12, fontFamily: "Space Grotesk" }}
                           tickSize={4}
                         />
                         <Tooltip
                           contentStyle={{
-                            background: "#212529",
-                            border: "1px solid #495057",
+                            background: "#2C2C2C",
+                            border: "1px solid #8A8580",
                             borderRadius: 0,
                             fontSize: 12,
                             fontFamily: "Space Grotesk",
-                            color: "#F8F9FA",
+                            color: "#F5F0E8",
                           }}
-                          labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#ADB5BD" }}
+                          labelStyle={{ fontFamily: "Orbitron", fontSize: 10, color: "#D4CFC7" }}
                       formatter={(value) => [`${value}%`, "Niveau"]}
                         />
                         <Radar
                           name="IT"
                           dataKey="value"
-                          fill="#6C757D"
+                          fill="#8A8580"
                           fillOpacity={0.15}
-                          dot={{ r: 3, fill: "#F8F9FA", stroke: "#6C757D", strokeWidth: 0.5 }}
+                          dot={{ r: 3, fill: "#F5F0E8", stroke: "#8A8580", strokeWidth: 0.5 }}
                         />
                       </RadarChart>
                     </ResponsiveContainer>

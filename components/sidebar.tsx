@@ -87,7 +87,7 @@ export function Sidebar() {
               href="/CV.pdf"
               download
               onClick={() => setOpen(false)}
-              className="flex w-full items-center gap-3 rounded-sm px-3 py-2.5 text-left text-sm transition-all duration-150 bg-[#F8F9FA] text-[#212529] hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
+              className="flex w-full items-center gap-3 rounded-sm px-3 py-2.5 text-left text-sm transition-all duration-150 bg-sidebar-primary text-sidebar-primary-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
             >
               <Download size={14} className="shrink-0" />
               Télécharger CV
@@ -98,7 +98,7 @@ export function Sidebar() {
 
       {open && (
         <div
-          className="fixed inset-0 z-30 bg-black/50 md:hidden"
+          className="fixed inset-0 z-30 bg-sidebar/50 md:hidden"
           onClick={() => setOpen(false)}
           aria-hidden="true"
         />
