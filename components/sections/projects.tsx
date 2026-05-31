@@ -51,6 +51,7 @@ export function Projects() {
                   alt={project.title}
                   width={600}
                   height={338}
+                  loading="eager"
                   className="w-full object-cover"
                 />
               </div>

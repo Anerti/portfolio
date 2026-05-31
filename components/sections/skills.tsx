@@ -94,7 +94,7 @@ export function Skills() {
                 Soft Skills
               </h3>
               <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                   <RadarChart
                     data={softSkills}
                     cx="50%"
@@ -162,7 +162,7 @@ export function Skills() {
                 </button>
               </div>
               <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                   <RadarChart
                     data={hardTab === 0 ? langSkills : frameworkSkills}
                     cx="50%"
@@ -225,7 +225,7 @@ export function Skills() {
                 </span>
               </div>
               <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                   <RadarChart data={langData} cx="50%" cy="50%" outerRadius="75%">
                     <PolarGrid gridType="polygon" stroke="#495057" strokeOpacity={0.3} />
                     <PolarAngleAxis
@@ -279,7 +279,7 @@ export function Skills() {
                   IT
                 </p>
                   <div className="h-[350px] sm:h-[420px] lg:h-[480px] [&_svg]:outline-none">
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                       <RadarChart
                         data={itSkills}
                         cx="50%"
