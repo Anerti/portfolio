@@ -181,7 +181,7 @@ export function Contact() {
         </div>
       </form>
 
-      <footer className="mt-16 flex items-center justify-center gap-2 text-[10px] font-heading uppercase tracking-[0.2em] text-muted-foreground/70">
+      <footer suppressHydrationWarning className="mt-16 flex items-center justify-center gap-2 text-[10px] font-heading uppercase tracking-[0.2em] text-muted-foreground/70">
         <span className="inline-block size-1.5 rounded-full bg-accent/40" />
         &copy; {new Date().getFullYear()} Ervin ANDRIANOMBANA
       </footer>

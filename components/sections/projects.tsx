@@ -34,9 +34,14 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="relative flex min-h-screen flex-col justify-center overflow-hidden scroll-mt-24">
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08]">
-        <img src="/server-bg.svg" alt="" className="size-full object-contain" />
-      </div>
+      <Image
+        src="/server-bg.svg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-contain opacity-[0.08]"
+        aria-hidden
+      />
       <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
         <span className="inline-block size-1.5 rounded-full bg-accent/60" />
         INPUT 3
@@ -54,7 +59,7 @@ export function Projects() {
                   alt={project.title}
                   width={600}
                   height={338}
-                  loading="eager"
+                  priority
                   className="w-full object-cover"
                 />
               </div>
