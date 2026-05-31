@@ -18,8 +18,11 @@ export function Writeups() {
     <>
       <section
         id="writeups"
-        className="flex min-h-screen flex-col justify-center scroll-mt-24"
+        className="relative flex min-h-screen flex-col justify-center overflow-hidden scroll-mt-24"
       >
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.08]">
+          <img src="/article-bg.svg" alt="" className="size-full object-contain" />
+        </div>
         <span className="inline-flex items-center gap-1.5 font-heading text-[10px] uppercase tracking-[0.25em] text-accent">
           <span className="inline-block size-1.5 rounded-full bg-accent/60" />
           INPUT 4
