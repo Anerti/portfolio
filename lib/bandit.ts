@@ -1,4 +1,4 @@
-export type LevelData = {
+type LevelData = {
   slug: string
   title: string
   excerpt: string
