@@ -1,6 +1,8 @@
 "use server";
 
-export async function submitContact(formData: FormData) {
+export type FormState = { success?: boolean; error?: string }
+
+export async function submitContact(_prev: FormState, formData: FormData): Promise<FormState> {
   const firstName = formData.get("firstName");
   const lastName = formData.get("lastName");
   const email = formData.get("email");
@@ -8,8 +10,23 @@ export async function submitContact(formData: FormData) {
   const message = formData.get("message");
 
   if (!firstName || !lastName || !email || !subject || !message) {
-    throw new Error("Tous les champs sont requis.");
+    return { error: "Tous les champs sont requis." };
   }
 
-  console.log("Contact form submitted", { firstName, lastName, email, subject, message });
+  try {
+    const res = await fetch("https://formspree.io/f/mwvzakon", {
+      method: "POST",
+      body: JSON.stringify({ firstName, lastName, email, subject, message }),
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+    });
+
+    if (!res.ok) {
+      const body = await res.json();
+      return { error: body.error || "Une erreur est survenue." };
+    }
+
+    return { success: true };
+  } catch {
+    return { error: "Impossible d'envoyer le message. Réessayez plus tard." };
+  }
 }

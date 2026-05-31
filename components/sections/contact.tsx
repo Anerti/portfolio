@@ -1,5 +1,8 @@
+"use client";
+
+import { useActionState } from "react";
 import Image from "next/image";
-import { submitContact } from "@/lib/actions";
+import { submitContact, type FormState } from "@/lib/actions";
 
 function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -26,6 +29,8 @@ function DiscordIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function Contact() {
+  const [state, formAction, pending] = useActionState(submitContact, {} as FormState)
+
   return (
     <section id="contact" className="relative flex min-h-screen flex-col justify-center overflow-hidden scroll-mt-24">
       <Image
@@ -51,7 +56,7 @@ export function Contact() {
       </p>
 
       <form
-        action={submitContact}
+        action={formAction}
         className="mt-8 space-y-5"
       >
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -128,10 +133,17 @@ export function Contact() {
         <div className="flex items-center gap-6">
           <button
             type="submit"
-            className="cursor-pointer border-2 border-accent bg-accent px-6 py-3 font-heading text-xs uppercase tracking-[0.15em] text-accent-foreground transition-colors duration-200 hover:bg-accent/80"
+            disabled={pending}
+            className="cursor-pointer border-2 border-accent bg-accent px-6 py-3 font-heading text-xs uppercase tracking-[0.15em] text-accent-foreground transition-colors duration-200 hover:bg-accent/80 disabled:opacity-50"
           >
-            Envoyer
+            {pending ? "Envoi..." : "Envoyer"}
           </button>
+          {state?.success && (
+            <span className="text-sm text-emerald-500">Message envoyé !</span>
+          )}
+          {state?.error && (
+            <span className="text-sm text-red-400">{state.error}</span>
+          )}
 
           <span className="font-heading text-[10px] uppercase tracking-[0.2em] text-muted-foreground/40">
             — OU —
