@@ -160,7 +160,7 @@ export function Contact() {
               <GithubIcon className="size-5" />
             </a>
             <a
-              href="https://linkedin.com/in/anerti"
+              href="https://www.linkedin.com/in/ervin-andrianombana-b522143a1/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex size-10 items-center justify-center border-2 border-border text-muted-foreground transition-colors duration-200 hover:border-accent hover:text-accent"
@@ -169,7 +169,7 @@ export function Contact() {
               <LinkedinIcon className="size-5" />
             </a>
             <a
-              href="https://discord.com/users/anerti"
+              href="https://discord.com/users/1205857518593507358"
               target="_blank"
               rel="noopener noreferrer"
               className="flex size-10 items-center justify-center border-2 border-border text-muted-foreground transition-colors duration-200 hover:border-accent hover:text-accent"
